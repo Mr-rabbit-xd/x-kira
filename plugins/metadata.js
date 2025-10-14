@@ -1,5 +1,4 @@
-
-const { Module } = require('../lib/plugins');
+/*const { Module } = require('../lib/plugins');
 const { Group } = require('../lib/database/model');
 
 Module({
@@ -56,3 +55,4 @@ Module({
     await message.send('_Goodbye message updated_');
 });
       
+*/

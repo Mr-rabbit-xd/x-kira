@@ -6,7 +6,20 @@ Module({
     description: 'Replies with the bot latency'
 })(async (message) => {
     const start = Date.now();
+    const emojis = [
+        '⛅', '👻', '⛄', '👀', '🪁', '🪃', '🎳', '🎀',
+        '🌸', '🌟', '🍥', '🎀', '🍓', '🍡', '💗', '🦋',
+        '💫', '💀', '☁️', '🌨️', '🌧️', '🌦️', '🌥️', '⛅',
+        '🪹', '⚡', '🌟', '☁️', '🎐', '🏖️', '🎐', '🪺',
+        '🌊', '🐚', '🪸', '🍒', '🍇', '🍉', '🌻', '🎢',
+        '🚀', '🍫', '💎', '🌋', '🏔️', '⛰️', '🌙', '🪐',
+        '🌲', '🍃', '🍂', '🍁', '🪵', '🍄', '🌿', '🐞',
+        '🐍', '🕊️', '🕷️', '🕸️', '🎃', '🏟️', '🎡', '🥂',
+        '🗿', '⛩️'
+      ];
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+     
     const sent = await message.send('🏓 Pong...');
     const latency = Date.now() - start;
-    await message.send(`Latency: ${latency} ms`, { edit: sent.key });
+    await message.send(`*${emoji}➥𝔓͓✻͢͞ᥢ𝔤͛ ${latency} 𝖒ˢ*`, { edit: sent.key });
 });

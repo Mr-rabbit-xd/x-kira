@@ -1,5 +1,7 @@
 const os = require("os");
 const { Module, commands } = require("../lib/plugins");
+const { getTheme } = require("../Themes/themes");
+const theme = getTheme();
 
 const config = require("../config");
 const TextStyles = require("../lib/textfonts");
@@ -79,23 +81,23 @@ Module({
 
   _cmd_st += `\nX-kira mini bot`;
 
-  const channelJid = "120363421060554246@newsletter";
+  const channelJid = "120363400835083687@newsletter";
   const channelName = "© X-kira";
-  const serverMessageId = 1;
+  const serverMessageId = 7;
 
   const opts = {
     image: { url: "https://files.catbox.moe/n9ectm.jpg" },
     caption: _cmd_st,
-    mimetype: 'image/jpeg',
+    mimetype: "image/jpeg",
     contextInfo: {
       forwardingScore: 999,
       isForwarded: true,
       forwardedNewsletterMessageInfo: {
         newsletterJid: channelJid,
         newsletterName: channelName,
-        serverMessageId: serverMessageId
-      }
-    }
+        serverMessageId: serverMessageId,
+      },
+    },
   };
 
   await message.conn.sendMessage(message.from, opts);

@@ -13,7 +13,7 @@ module.exports = {
   packname: process.env.PACKNAME || "ɠαɾϝιҽʅɗ",
   author: process.env.AUTHOR || "ɳαxσɾ",
   SESSION_ID: process.env.SESSION_ID || "",
-  THEME: process.env.THEME || "", //Garfield
+  THEME: process.env.THEME || "t", //Garfield
   maxFileSize: parseInt(process.env.MAX_FILE_SIZE) || 100 * 1024 * 1024,
   timezone: process.env.TIMEZONE || "UTC",
   GIST_URL: process.env.GIST_URL || "",

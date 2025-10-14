@@ -1,0 +1,14 @@
+{
+    "isGroup": "only use group",
+    "isAdmin": "admin & bot use",
+    "isBotAdmin": "Garfield",
+    "fromMe": "only bot use",
+    "botName": "Garfield",
+    "owner": "Diegoson",
+    "image": "https://files.catbox.moe/lq7nwm.jpg",
+    "other": {
+      "connected": "✅ Garfield bot has connected",
+      "footer": "© Garfield Bot",
+      "error": "an error occured gbot"
+    }
+  }
