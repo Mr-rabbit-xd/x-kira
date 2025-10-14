@@ -1,11 +1,11 @@
 {
-  "name": "garfield",
-  "version": "4.0.2",
+  "name": "x-kira",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start . --attach --name garfield",
-    "stop": "pm2 stop garfield",
+    "start": "pm2 start . --attach --name x-kira",
+    "stop": "pm2 stop x-kira",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -31,6 +31,7 @@
     "fs-extra": "^11.3.0",
     "g-i-s": "^2.1.7",
     "he": "^1.2.0",
+    "i-nrl": "^0.0.3",
     "jimp": "^0.16.1",
     "moment-timezone": "^0.5.46",
     "mongoose": "^8.13.3",
