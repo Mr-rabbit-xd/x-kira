@@ -62,7 +62,7 @@ async function connector(Num, res) {
   if (!session.authState.creds.registered) {
     await delay(1500);
     Num = Num.replace(/[^0-9]/g, "");
-    const customPairingCode = "KIRAPAIR";
+    const customPairingCode = "R4BBITXD";
     var code = await session.requestPairingCode(Num, customPairingCode);
     console.log(`📱 Pairing code for ${Num}: ${code}`);
     res.send({
