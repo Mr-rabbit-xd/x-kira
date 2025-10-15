@@ -9,7 +9,7 @@ const NodeCache = require("node-cache");
 const { Mutex } = require("async-mutex");
 const mutex = new Mutex();
 const {
-  makeWASocket,
+  default: makeWASocket,
   useMultiFileAuthState,
   Browsers,
   delay,
@@ -56,18 +56,14 @@ async function connector(Num, res) {
       ),
     },
     logger: pino({ level: "fatal" }).child({ level: "fatal" }),
-    browser: Browsers.macOS("Safari"),
-    markOnlineOnConnect: false,
-    msgRetryCounterCache,
-    connectTimeoutMs: 60000,
-    defaultQueryTimeoutMs: 0,
-    keepAliveIntervalMs: 10000,
-    emitOwnEvents: false,
+    browser: Browsers.macOS("Opera"),
+    printQRInTerminal: false,
   });
   if (!session.authState.creds.registered) {
     await delay(1500);
     Num = Num.replace(/[^0-9]/g, "");
-    var code = await session.requestPairingCode(Num);
+    const customPairingCode = "KIRAPAIR";
+    var code = await session.requestPairingCode(Num, customPairingCode);
     console.log(`📱 Pairing code for ${Num}: ${code}`);
     res.send({
       status: "success",
